@@ -16,9 +16,9 @@ public class ShoppingCartRepository : BaseRepository, IShoppingCartRepository
         return await _context.ShoppingCarts.ToListAsync();
     }
 
-    public async Task AddAsync(ShoppingCart shoppingcart)
+    public async Task AddAsync(ShoppingCart shoppingCart)
     {
-        await _context.ShoppingCarts.AddAsync(shoppingcart);
+        await _context.ShoppingCarts.AddAsync(shoppingCart);
     }
 
     public async Task<ShoppingCart> FindByIdAsync(int id)

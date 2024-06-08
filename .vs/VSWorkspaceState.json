@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ChromaComics",
+    "\\ChromaComics\\obj",
+    "\\ChromaComics\\Shared",
+    "\\ChromaComics\\Shared\\Domain",
+    "\\ChromaComics\\Shared\\Domain\\Services",
+    "\\ChromaComics\\Shared\\Extensions",
+    "\\ChromaComics\\Shared\\Persistence",
+    "\\ChromaComics\\Shared\\Persistence\\Contexts",
+    "\\ChromaComics\\Shared\\Persistence\\Repositories"
+  ],
+  "SelectedNode": "\\ChromaComics\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

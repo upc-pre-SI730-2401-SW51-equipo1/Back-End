@@ -16,7 +16,7 @@ public class ShoppingCartService : IShoppingCartService
 
     public async Task<IEnumerable<ShoppingCart>> ListAsync()
     {
-        return await _shoppincartRepository.ListAsync();
+        return await _shoppingcartRepository.ListAsync();
     }
 
     public async Task<ShoppingCartResponse> SaveAsync(ShoppingCart shoppingcart)
@@ -52,23 +52,23 @@ public class ShoppingCartService : IShoppingCartService
         }
     }
 
-    public async Task<CategoryResponse> DeleteAsync(int id)
+    public async Task<ShoppingCartResponse> DeleteAsync(int id)
     {
-        var existingCategory = await _categoryRepository.FindByIdAsync(id);
+        var existingShoppingCart = await _shoppingcartRepository.FindByIdAsync(id);
 
-        if (existingCategory == null)
-            return new CategoryResponse("Category not found.");
+        if (existingShoppingCart == null)
+            return new ShoppingCartResponse("Cart not found.");
 
         try
         {
-            _categoryRepository.Remove(existingCategory);
+            _shoppingcartRepository.Remove(existingShoppingCart);
 
-            return new CategoryResponse(existingCategory);
+            return new ShoppingCartResponse(existingShoppingCart);
         }
         catch (Exception e)
         {
-            // Do some logging stuff
-            return new CategoryResponse($"An error occurred while deleting the category: {e.Message}");
+
+            return new ShoppingCartResponse($"An error occurred while deleting the cart: {e.Message}");
         }
     }
 }

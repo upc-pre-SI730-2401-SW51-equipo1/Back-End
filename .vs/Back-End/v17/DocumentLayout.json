@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ChromaComics\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ChromaComics\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\Folder.DotSettings.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Folder.DotSettings.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "project.assets.json",
+              "DocumentMoniker": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\obj\\project.assets.json",
+              "RelativeDocumentMoniker": "ChromaComics\\obj\\project.assets.json",
+              "ToolTip": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\obj\\project.assets.json",
+              "RelativeToolTip": "ChromaComics\\obj\\project.assets.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-08T01:53:54.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Program.cs",
+              "RelativeDocumentMoniker": "ChromaComics\\Program.cs",
+              "ToolTip": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Program.cs",
+              "RelativeToolTip": "ChromaComics\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T01:48:54.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Folder.DotSettings.user",
+              "DocumentMoniker": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\Folder.DotSettings.user",
+              "RelativeDocumentMoniker": "Folder.DotSettings.user",
+              "ToolTip": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\Folder.DotSettings.user",
+              "RelativeToolTip": "Folder.DotSettings.user",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-06-08T01:48:49.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "ChromaComics\\Shared\\Persistence\\Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T01:48:43.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Albion\\Desktop\\a\u00F1a\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs",
+              "RelativeToolTip": "ChromaComics\\Shared\\Persistence\\Contexts\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T01:46:21.821Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

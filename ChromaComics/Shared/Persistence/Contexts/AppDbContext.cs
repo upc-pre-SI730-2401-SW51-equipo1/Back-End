@@ -7,9 +7,8 @@ namespace ChromaComics.Shared.Persistence.Contexts;
 public class AppDbContext : DbContext
 {
     
-    public DbSet<Category> Categories { get; set; }
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
     
-    public DbSet<Comic> Comics { get; set; }
 
 
     public AppDbContext(DbContextOptions options) : base(options)
@@ -21,25 +20,10 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(builder);
 
-        builder.Entity<Category>().ToTable("Categories");
-        builder.Entity<Category>().HasKey(p => p.Id);
-        builder.Entity<Category>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Category>().Property(p => p.Name).IsRequired().HasMaxLength(30);
+        builder.Entity<ShoppingCart>().ToTable("Carts");
+        builder.Entity<ShoppingCart>().HasKey(p => p.Id);
+        builder.Entity<ShoppingCart>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         
-        // Relationships
-        builder.Entity<Category>()
-            .HasMany(p => p.Comics)
-            .WithOne(p => p.Category)
-            .HasForeignKey(p => p.CategoryId);
-        
-        builder.Entity<Comic>().ToTable("Comics");
-        builder.Entity<Comic>().HasKey(p => p.Id);
-        builder.Entity<Comic>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Comic>().Property(p => p.Title).IsRequired().HasMaxLength(50);
-        builder.Entity<Comic>().Property(p => p.Description).HasMaxLength(120);
-        
-        
-        // Apply Snake Case Naming Convention
         
         builder.UseSnakeCaseNamingConvention();
     }
