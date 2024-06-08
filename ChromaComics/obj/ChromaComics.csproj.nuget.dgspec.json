@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alumnos/Downloads/Back-End/ChromaComics/ChromaComics.csproj": {}
+    "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj": {}
   },
   "projects": {
-    "/Users/alumnos/Downloads/Back-End/ChromaComics/ChromaComics.csproj": {
+    "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alumnos/Downloads/Back-End/ChromaComics/ChromaComics.csproj",
+        "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
         "projectName": "ChromaComics",
-        "projectPath": "/Users/alumnos/Downloads/Back-End/ChromaComics/ChromaComics.csproj",
-        "packagesPath": "/Users/alumnos/.nuget/packages/",
-        "outputPath": "/Users/alumnos/Downloads/Back-End/ChromaComics/obj/",
+        "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
+        "packagesPath": "C:\\Users\\lasto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alumnos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -35,16 +35,32 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "EntityFrameworkCore.CreatedUpdatedDate": {
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -66,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
