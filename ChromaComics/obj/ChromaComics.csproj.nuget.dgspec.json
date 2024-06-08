@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj": {}
+    "D:\\DATOSSS\\Archivos de la universidad\\5to Ciclo\\Aplicaciones Web\\Back-End\\ChromaComics\\ChromaComics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj": {
+    "D:\\DATOSSS\\Archivos de la universidad\\5to Ciclo\\Aplicaciones Web\\Back-End\\ChromaComics\\ChromaComics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
+        "projectUniqueName": "D:\\DATOSSS\\Archivos de la universidad\\5to Ciclo\\Aplicaciones Web\\Back-End\\ChromaComics\\ChromaComics.csproj",
         "projectName": "ChromaComics",
-        "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
-        "packagesPath": "C:\\Users\\lasto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\obj\\",
+        "projectPath": "D:\\DATOSSS\\Archivos de la universidad\\5to Ciclo\\Aplicaciones Web\\Back-End\\ChromaComics\\ChromaComics.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\DATOSSS\\Archivos de la universidad\\5to Ciclo\\Aplicaciones Web\\Back-End\\ChromaComics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -38,6 +38,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "EntityFrameworkCore.CreatedUpdatedDate": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -54,6 +58,10 @@
               "target": "Package",
               "version": "[1.1.6, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.6.0, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -61,6 +69,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.6.0, )"
             }
           },
           "imports": [
@@ -82,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\LENOVO\\.dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
