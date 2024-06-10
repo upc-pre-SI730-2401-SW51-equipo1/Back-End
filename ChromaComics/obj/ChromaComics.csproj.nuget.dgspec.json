@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\super code\\Back-End\\ChromaComics\\ChromaComics.csproj": {}
+    "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-chromaComicssas\\ChromaComics\\ChromaComics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\super code\\Back-End\\ChromaComics\\ChromaComics.csproj": {
+    "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-chromaComicssas\\ChromaComics\\ChromaComics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\super code\\Back-End\\ChromaComics\\ChromaComics.csproj",
+        "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-chromaComicssas\\ChromaComics\\ChromaComics.csproj",
         "projectName": "ChromaComics",
-        "projectPath": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\super code\\Back-End\\ChromaComics\\ChromaComics.csproj",
-        "packagesPath": "C:\\Users\\Albion\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\super code\\Back-End\\ChromaComics\\obj\\",
+        "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-chromaComicssas\\ChromaComics\\ChromaComics.csproj",
+        "packagesPath": "C:\\Users\\lasto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-chromaComicssas\\ChromaComics\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Albion\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -108,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

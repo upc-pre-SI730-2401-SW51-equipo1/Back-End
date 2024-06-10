@@ -10,5 +10,13 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Reflection.AssemblyCompanyAttribute("ChromaComics")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b75693f4e7804516a404de640f7c117c5f52cda")]
+[assembly: System.Reflection.AssemblyProductAttribute("ChromaComics")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ChromaComics")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+
 // Generado por la clase WriteCodeFragment de MSBuild.
 

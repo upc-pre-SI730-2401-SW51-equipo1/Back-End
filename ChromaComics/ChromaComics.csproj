@@ -21,5 +21,12 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.17"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Shared\obj\ChromaComics.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Shared\obj\Debug\net8.0\ChromaComics.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="Shared\obj\Debug\net8.0\staticwebassets.build.json" />
+      <_ContentIncludedByDefault Remove="Shared\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Shared\obj\project.packagespec.json" />
+    </ItemGroup>
 
 </Project>
