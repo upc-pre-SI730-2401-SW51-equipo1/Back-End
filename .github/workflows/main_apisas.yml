@@ -22,6 +22,10 @@ jobs:
           dotnet-version: '8.x'
           include-prerelease: true
 
+      - name: Install dependencies
+        run: dotnet restore
+        working-directory: ChromaComics/
+      
       - name: Build with dotnet
         run: |
           cd src
