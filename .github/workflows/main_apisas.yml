@@ -38,11 +38,8 @@ jobs:
         working-directory: ChromaComics
         
           
-      - name: ZyAction:.NET Restore
-        uses: zyactions/dotnet-restore@v1.1.0
-        working-directory: ChromaComics
 
-       
+      
   
       - name: Build with dotnet
         run: dotnet build --configuration Release
