@@ -86,7 +86,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'apisas'
+          app-name: 'api-chromecomicss'
           slot-name: 'Production'
           package: .
           
