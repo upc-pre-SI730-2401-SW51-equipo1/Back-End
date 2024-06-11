@@ -21,8 +21,6 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
-      - name: dotnet restoret
-        uses: actions/dotnet-restore@v1.1.0
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
