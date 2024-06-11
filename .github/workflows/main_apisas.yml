@@ -21,6 +21,10 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
+      - name: ZyAction: .NET Restore
+  # You may pin to the exact commit or the version.
+  # uses: zyactions/dotnet-restore@bffc71e1a5275122a2795bf2912804f0185db27c
+          uses: zyactions/dotnet-restore@v1.1.0
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
