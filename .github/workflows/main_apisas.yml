@@ -35,6 +35,7 @@ jobs:
 
       - name: dotnet publish with profile
         run: dotnet publish -p:PublishProfile=FolderProfile
+        working-directory: ChromaComics
         
           
       - name: ZyAction:.NET Restore
