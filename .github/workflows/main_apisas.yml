@@ -40,6 +40,7 @@ jobs:
           
       - name: ZyAction:.NET Restore
         uses: zyactions/dotnet-restore@v1.1.0
+        working-directory: ChromaComics
 
        
   
