@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: dotnet restore
-        working-directory: ChromaComics/
+        working-directory: ChromaComics
       
       - name: Build with dotnet
         run: |
