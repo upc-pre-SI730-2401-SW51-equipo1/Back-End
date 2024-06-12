@@ -21,8 +21,9 @@ public class BillingController(IBillingCommandService billingCommandService, IBi
             return BadRequest();
         }
         var billingResource = BillingResourceFromEntityAssembler.ToResourceFromEntity(billing);
-        return CreatedAtAction(nameof(GetBillingById), new {id = billingResource.Id}, billingResource);
+        return CreatedAtAction(nameof(GetBillingById), new {billingId = billingResource.Id}, billingResource);
        }
+    
 
     [HttpGet]
     public async Task<IActionResult> GetAllBilling()

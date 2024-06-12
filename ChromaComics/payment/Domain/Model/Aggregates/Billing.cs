@@ -48,6 +48,7 @@ public class Billing
     public string EmailAddress => Email.Address;
 
     public string StreetAddress => Address.FullAddress;
+    public string ShoppingSummary => Shopping.FullShoppingSummary;
     
     
 }

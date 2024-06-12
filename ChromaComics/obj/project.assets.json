@@ -6805,19 +6805,22 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
+      "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComics\\ChromaComics\\ChromaComics.csproj",
       "projectName": "ChromaComics",
-      "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\ChromaComics.csproj",
+      "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComics\\ChromaComics\\ChromaComics.csproj",
       "packagesPath": "C:\\Users\\lasto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\back-end\\ChromaComics\\obj\\",
+      "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComics\\ChromaComics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

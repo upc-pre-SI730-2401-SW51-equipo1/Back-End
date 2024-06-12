@@ -50,7 +50,13 @@ public class AppDbContext : DbContext
             });
         builder.Entity<Billing>().Property(f => f.PhoneNumber).IsRequired();
         builder.Entity<Billing>().Property(f => f.Status).IsRequired();
-
+        builder.Entity<Billing>().OwnsOne(p => p.Shopping,
+            e =>
+            {
+                e.WithOwner().HasForeignKey("Id");
+                e.Property(a => a.ShoppingId).HasColumnName("ShoppingId").IsRequired(false);
+                e.Property(a => a.TotalPrice).HasColumnName("TotalPrice").IsRequired(false);
+            });
         builder.UseSnakeCaseNamingConvention();
     }
 }
