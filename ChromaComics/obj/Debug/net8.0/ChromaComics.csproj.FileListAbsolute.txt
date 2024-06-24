@@ -66,3 +66,4 @@ D:\DATOSSS\Archivos de la universidad\5to Ciclo\Aplicaciones Web\Back-End\Chroma
 D:\DATOSSS\Archivos de la universidad\5to Ciclo\Aplicaciones Web\Back-End\ChromaComics\obj\Debug\net8.0\ChromaComics.pdb
 D:\DATOSSS\Archivos de la universidad\5to Ciclo\Aplicaciones Web\Back-End\ChromaComics\obj\Debug\net8.0\ChromaComics.genruntimeconfig.cache
 D:\DATOSSS\Archivos de la universidad\5to Ciclo\Aplicaciones Web\Back-End\ChromaComics\obj\Debug\net8.0\ref\ChromaComics.dll
+D:\DATOSSS\Archivos de la universidad\5to Ciclo\Aplicaciones Web\Back-End\ChromaComics\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll

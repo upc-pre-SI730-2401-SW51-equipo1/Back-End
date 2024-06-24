@@ -1,4 +1,4 @@
-namespace ACME.LearningCenterPlatform.API.IAM.Infrastructure.Tokens.JWT.Configuration;
+namespace ChromaComics.IAM.Infrastructure.Tokens.JWT.Configuration;
 
 /**
  * <summary>
