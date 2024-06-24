@@ -1,14 +1,10 @@
-﻿using ChromaComics.Comics.Domain.Models;
+
+using ChromaComics.Comics.Domain.Model.Aggregates;
+using ChromaComics.Shared.Domain.Repositories;
 
 namespace ChromaComics.Comics.Domain.Repositories;
 
-public interface IComicRepository
+public interface IComicRepository : IBaseRepository<Comic>
 {
-    Task<IEnumerable<Comic>> ListAsync();
-    Task AddAsync(Comic tutorial);
-    Task<Comic> FindByIdAsync(int tutorialId);
-    Task<Comic> FindByTitleAsync(string title);
     Task<IEnumerable<Comic>> FindByCategoryIdAsync(int categoryId);
-    void Update(Comic tutorial);
-    void Remove(Comic tutorial);
 }

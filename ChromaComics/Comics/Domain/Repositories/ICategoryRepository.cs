@@ -1,13 +1,10 @@
-﻿using ChromaComics.Comics.Domain.Models;
+
+using ChromaComics.Comics.Domain.Model.Entities;
+using ChromaComics.Shared.Domain.Repositories;
 
 namespace ChromaComics.Comics.Domain.Repositories;
 
-public interface ICategoryRepository
+public interface ICategoryRepository : IBaseRepository<Category>
 {
-    Task<IEnumerable<Category>> ListAsync();
-    Task AddAsync(Category category);
-    Task<Category> FindByIdAsync(int id);
-    void Update(Category category);
-    void Remove(Category category);
-
+    
 }
