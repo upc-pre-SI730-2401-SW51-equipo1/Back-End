@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Resources;
+using ChromaComics.ShoppingCarts.Domain.Models;
+using ChromaComics.ShoppingCarts.Resources;
 
-namespace ChromaComics.Comics.Mapping;
+namespace ChromaComics.ShoppingCarts.Mapping;
 
 public class ResourceToModelProfile : Profile
 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\ChromaComics.csproj": {}
+    "C:\\Users\\Albion\\Desktop\\Nueva carpeta\\Back-End\\ChromaComics\\ChromaComics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\ChromaComics.csproj": {
+    "C:\\Users\\Albion\\Desktop\\Nueva carpeta\\Back-End\\ChromaComics\\ChromaComics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\ChromaComics.csproj",
+        "projectUniqueName": "C:\\Users\\Albion\\Desktop\\Nueva carpeta\\Back-End\\ChromaComics\\ChromaComics.csproj",
         "projectName": "ChromaComics",
-        "projectPath": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\ChromaComics.csproj",
+        "projectPath": "C:\\Users\\Albion\\Desktop\\Nueva carpeta\\Back-End\\ChromaComics\\ChromaComics.csproj",
         "packagesPath": "C:\\Users\\Albion\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albion\\Desktop\\aña\\aplicamomos web\\salvadaa de code\\rar\\Back-End\\ChromaComics\\obj\\",
+        "outputPath": "C:\\Users\\Albion\\Desktop\\Nueva carpeta\\Back-End\\ChromaComics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

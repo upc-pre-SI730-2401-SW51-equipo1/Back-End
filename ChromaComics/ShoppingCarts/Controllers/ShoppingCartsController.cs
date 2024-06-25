@@ -5,7 +5,7 @@ using ChromaComics.ShoppingCarts.Resources;
 using ChromaComics.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ChromaComics.Comics.Controllers;
+namespace ChromaComics.ShoppingCarts.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]

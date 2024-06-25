@@ -1,9 +1,9 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Repositories;
-using ChromaComics.Comics.Domain.Services;
-using ChromaComics.Comics.Domain.Services.Communication;
+﻿using ChromaComics.ShoppingCarts.Domain.Models;
+using ChromaComics.ShoppingCarts.Domain.Repositories;
+using ChromaComics.ShoppingCarts.Domain.Services;
+using ChromaComics.ShoppingCarts.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Services;
+namespace ChromaComics.ShoppingCarts.Services;
 
 public class ShoppingCartService : IShoppingCartService
 {

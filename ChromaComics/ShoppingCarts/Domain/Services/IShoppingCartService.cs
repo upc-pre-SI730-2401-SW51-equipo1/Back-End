@@ -1,7 +1,7 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Services.Communication;
+﻿using ChromaComics.ShoppingCarts.Domain.Models;
+using ChromaComics.ShoppingCarts.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Domain.Services;
+namespace ChromaComics.ShoppingCarts.Domain.Services;
 
 public interface IShoppingCartService
 {

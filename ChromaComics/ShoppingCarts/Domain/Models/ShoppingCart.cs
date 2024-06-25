@@ -1,4 +1,4 @@
-﻿namespace ChromaComics.Comics.Domain.Models;
+﻿namespace ChromaComics.ShoppingCarts.Domain.Models;
 
 public class ShoppingCart
 {

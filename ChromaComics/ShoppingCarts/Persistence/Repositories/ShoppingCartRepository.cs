@@ -1,5 +1,5 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Repositories;
+﻿using ChromaComics.ShoppingCarts.Domain.Models;
+using ChromaComics.ShoppingCarts.Domain.Repositories;
 using ChromaComics.Shared.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 

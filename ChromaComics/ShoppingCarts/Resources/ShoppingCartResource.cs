@@ -1,4 +1,4 @@
-﻿namespace ChromaComics.Comics.Resources;
+﻿namespace ChromaComics.ShoppingCarts.Resources;
 
 public class ShoppingCartResource
 {

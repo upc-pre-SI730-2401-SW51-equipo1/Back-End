@@ -1,7 +1,7 @@
-﻿using ChromaComics.Comics.Domain.Models;
+﻿using ChromaComics.ShoppingCarts.Domain.Models;
 using ChromaComics.Shared.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Domain.Services.Communication;
+namespace ChromaComics.ShoppingCarts.Domain.Services.Communication;
 
 public class ShoppingCartResponse : BaseResponse<ShoppingCart>
 {
