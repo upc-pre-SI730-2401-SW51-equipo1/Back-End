@@ -1,3 +1,8 @@
+using ChromaComics.Comics.Application.Internal.CommandServices;
+using ChromaComics.Comics.Application.Internal.QueryServices;
+using ChromaComics.Comics.Domain.Repositories;
+using ChromaComics.Comics.Domain.Services;
+using ChromaComics.Comics.Infrastructure.Persistence.EFC.Repositories;
 using ChromaComics.IAM.Application.Internal.CommandServices;
 using ChromaComics.IAM.Application.Internal.OutboundServices;
 using ChromaComics.IAM.Application.Internal.QueryServices;
@@ -10,11 +15,16 @@ using ChromaComics.IAM.Infrastructure.Tokens.JWT.Configuration;
 using ChromaComics.IAM.Infrastructure.Tokens.JWT.Services;
 using ChromaComics.IAM.Interfaces.ACL;
 using ChromaComics.IAM.Interfaces.ACL.Services;
+using ChromaComics.payment.Application.Internal.CommandServices;
+using ChromaComics.payment.Application.Internal.QueryServices;
+using ChromaComics.payment.Domain.Repositories;
+using ChromaComics.payment.Domain.Services;
+using ChromaComics.payment.Infrastructure.Repositories;
 using ChromaComics.Shared.Domain.Repositories;
 using ChromaComics.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Repositories;
-using Microsoft.AspNetCore.Authorization;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -46,6 +56,7 @@ builder.Services.AddDbContext<AppDbContext>(
                     .LogTo(Console.WriteLine, LogLevel.Error)
                     .EnableDetailedErrors();
     });
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -116,12 +127,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
 // IAM Bounded Context Injection Configuration
-builder.Services.AddAuthorization(options =>
-{
-    options.FallbackPolicy = new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-});
+
 // TokenSettings Configuration
 
 builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("TokenSettings"));
@@ -133,6 +139,19 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IHashingService, HashingService>();
 builder.Services.AddScoped<IIamContextFacade, IamContextFacade>();
 
+
+
+// Publishing Bounded Context Injection Configuration
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryCommandService, CategoryCommandService>();
+builder.Services.AddScoped<ICategoryQueryService, CategoryQueryService>();
+builder.Services.AddScoped<IComicRepository, ComicRepository>();
+builder.Services.AddScoped<IComicCommandService, ComicCommandService>();
+builder.Services.AddScoped<IComicQueryService, ComicQueryService>();
+// billing Bounded Context Injection Configuration
+builder.Services.AddScoped<IBillingRepository, BillingRepository>();
+builder.Services.AddScoped<IBillingCommandService, BillingCommandService>();
+builder.Services.AddScoped<IBillingQueryService, BillingQueryService>();
 var app = builder.Build();
 
 // Verify Database Objects are created
@@ -144,10 +163,12 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
+app.UseSwagger();
+app.UseSwaggerUI();
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage(); // Página de excepciones para desarrolladores
 }
 
 app.UseCors("AllowAllPolicy");

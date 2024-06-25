@@ -41,6 +41,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
@@ -48,6 +52,10 @@
             "EntityFrameworkCore.CreatedUpdatedDate": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Humanizer.Core": {
+              "target": "Package",
+              "version": "[3.0.0-beta.54, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -5,7 +5,6 @@ C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\ChromaComics.runtimeconfig.json
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\ChromaComics.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\ChromaComics.pdb
-C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\EntityFrameworkCore.CreatedUpdatedDate.dll
@@ -13,7 +12,6 @@ C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\K4os.Compression.LZ4.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\K4os.Hash.xxHash.dll
-C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
@@ -68,3 +66,6 @@ C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\obj\Debug\net8.
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\obj\Debug\net8.0\ChromaComics.pdb
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\obj\Debug\net8.0\ChromaComics.genruntimeconfig.cache
 C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\obj\Debug\net8.0\ref\ChromaComics.dll
+C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\Humanizer.dll
+C:\Users\lasto\Desktop\app-web\Back-End-ChromaComic\ChromaComics\bin\Debug\net8.0\AutoMapper.dll
