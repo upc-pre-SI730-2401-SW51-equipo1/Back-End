@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Services;
-using ChromaComics.Comics.Resources;
+using ChromaComics.ShoppingCarts.Domain.Models;
+using ChromaComics.ShoppingCarts.Domain.Services;
+using ChromaComics.ShoppingCarts.Resources;
 using ChromaComics.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
