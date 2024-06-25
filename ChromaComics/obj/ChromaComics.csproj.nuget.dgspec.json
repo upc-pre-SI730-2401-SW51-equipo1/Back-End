@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2UPC\\Ciclo 8\\Aplicaciones web\\ChromaComictsFolder\\Back-End\\ChromaComics\\ChromaComics.csproj": {}
+    "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComic\\ChromaComics\\ChromaComics.csproj": {}
   },
   "projects": {
-    "D:\\2UPC\\Ciclo 8\\Aplicaciones web\\ChromaComictsFolder\\Back-End\\ChromaComics\\ChromaComics.csproj": {
+    "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComic\\ChromaComics\\ChromaComics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2UPC\\Ciclo 8\\Aplicaciones web\\ChromaComictsFolder\\Back-End\\ChromaComics\\ChromaComics.csproj",
+        "projectUniqueName": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComic\\ChromaComics\\ChromaComics.csproj",
         "projectName": "ChromaComics",
-        "projectPath": "D:\\2UPC\\Ciclo 8\\Aplicaciones web\\ChromaComictsFolder\\Back-End\\ChromaComics\\ChromaComics.csproj",
-        "packagesPath": "C:\\Users\\alvar\\.nuget\\packages\\",
-        "outputPath": "D:\\2UPC\\Ciclo 8\\Aplicaciones web\\ChromaComictsFolder\\Back-End\\ChromaComics\\obj\\",
+        "projectPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComic\\ChromaComics\\ChromaComics.csproj",
+        "packagesPath": "C:\\Users\\lasto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lasto\\Desktop\\app-web\\Back-End-ChromaComic\\ChromaComics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alvar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lasto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\alvar\\.dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
