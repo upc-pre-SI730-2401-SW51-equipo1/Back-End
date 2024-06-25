@@ -1,4 +1,4 @@
-using ChromaComics.Comics.Mapping;
+using ChromaComics.Recommendations.Mapping;
 using ChromaComics.Shared.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 

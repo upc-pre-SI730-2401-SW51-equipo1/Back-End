@@ -1,7 +1,7 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Services.Communication;
+﻿using ChromaComics.Recommendations.Domain.Models;
+using ChromaComics.Recommendations.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Domain.Services;
+namespace ChromaComics.Recommendations.Domain.Services;
 
 public interface IRecommendationService
 {

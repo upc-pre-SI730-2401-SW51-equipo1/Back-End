@@ -1,7 +1,7 @@
-﻿using ChromaComics.Comics.Domain.Models;
+﻿using ChromaComics.Recommendations.Domain.Models;
 using ChromaComics.Shared.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Domain.Services.Communication;
+namespace ChromaComics.Recommendations.Domain.Services.Communication;
 
 public class RecommendationResponse : BaseResponse<Recommendation>
 {

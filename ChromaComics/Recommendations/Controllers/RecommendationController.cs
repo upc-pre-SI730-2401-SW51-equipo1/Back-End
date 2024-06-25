@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Services;
-using ChromaComics.Comics.Resources;
+using ChromaComics.Recommendations.Domain.Models;
+using ChromaComics.Recommendations.Domain.Services;
+using ChromaComics.Recommendations.Resources;
 using ChromaComics.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ChromaComics.Comics.Controllers;
+namespace ChromaComics.Recommendations.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]

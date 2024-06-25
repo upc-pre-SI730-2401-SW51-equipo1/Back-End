@@ -1,4 +1,4 @@
-﻿namespace ChromaComics.Comics.Resources;
+﻿namespace ChromaComics.Recommendations.Resources;
 
 public class SaveRecommendationResource
 {

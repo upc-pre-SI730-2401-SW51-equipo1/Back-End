@@ -1,6 +1,6 @@
-﻿using ChromaComics.Comics.Domain.Models;
+﻿using ChromaComics.Recommendations.Domain.Models;
 
-namespace ChromaComics.Comics.Domain.Repositories;
+namespace ChromaComics.Recommendations.Domain.Repositories;
 
 public interface IRecommendationRepository
 {

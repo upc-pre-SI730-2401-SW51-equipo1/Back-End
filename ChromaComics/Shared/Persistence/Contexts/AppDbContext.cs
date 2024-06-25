@@ -1,4 +1,4 @@
-using ChromaComics.Comics.Domain.Models;
+using ChromaComics.Recommendations.Domain.Models;
 using ChromaComics.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 

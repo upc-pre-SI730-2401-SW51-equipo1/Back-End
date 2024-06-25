@@ -1,9 +1,9 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Repositories;
-using ChromaComics.Comics.Domain.Services;
-using ChromaComics.Comics.Domain.Services.Communication;
+﻿using ChromaComics.Recommendations.Domain.Models;
+using ChromaComics.Recommendations.Domain.Repositories;
+using ChromaComics.Recommendations.Domain.Services;
+using ChromaComics.Recommendations.Domain.Services.Communication;
 
-namespace ChromaComics.Comics.Services;
+namespace ChromaComics.Recommendations.Services;
 
 public class RecommendationService : IRecommendationService
 {

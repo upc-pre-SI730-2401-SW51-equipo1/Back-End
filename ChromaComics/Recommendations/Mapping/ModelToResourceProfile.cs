@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Resources;
+using ChromaComics.Recommendations.Domain.Models;
+using ChromaComics.Recommendations.Resources;
 
-namespace ChromaComics.Comics.Mapping;
+namespace ChromaComics.Recommendations.Mapping;
 
 public class ModelToResourceProfile : Profile
 {

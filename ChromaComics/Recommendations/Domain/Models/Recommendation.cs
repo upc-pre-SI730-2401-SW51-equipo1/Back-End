@@ -1,4 +1,4 @@
-﻿namespace ChromaComics.Comics.Domain.Models;
+﻿namespace ChromaComics.Recommendations.Domain.Models;
 
 public class Recommendation
 {

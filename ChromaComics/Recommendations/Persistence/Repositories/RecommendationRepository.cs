@@ -1,5 +1,5 @@
-﻿using ChromaComics.Comics.Domain.Models;
-using ChromaComics.Comics.Domain.Repositories;
+﻿using ChromaComics.Recommendations.Domain.Models;
+using ChromaComics.Recommendations.Domain.Repositories;
 using ChromaComics.Shared.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
