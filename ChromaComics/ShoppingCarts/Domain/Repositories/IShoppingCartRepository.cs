@@ -1,6 +1,6 @@
-﻿using ChromaComics.Comics.Domain.Models;
+﻿using ChromaComics.ShoppingCarts.Domain.Models;
 
-namespace ChromaComics.Comics.Domain.Repositories;
+namespace ChromaComics.ShoppingCarts.Domain.Repositories;
 
 public interface IShoppingCartRepository
 {
