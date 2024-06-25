@@ -4,7 +4,7 @@ using System.Security.Claims;
 using System.Text;
 using ChromaComics.IAM.Application.Internal.OutboundServices;
 using ChromaComics.IAM.Domain.Model.Aggregates;
-using ACME.LearningCenterPlatform.API.IAM.Infrastructure.Tokens.JWT.Configuration;
+using ChromaComics.IAM.Infrastructure.Tokens.JWT.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 

@@ -9,7 +9,6 @@
 
     <ItemGroup>
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-        <PackageReference Include="AutoMapper" Version="13.0.1" />
         <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.4" />
@@ -17,18 +16,8 @@
         <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0" />
         <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.6.2" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" />
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.17"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
-    </ItemGroup>
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="Shared\obj\ChromaComics.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="Shared\obj\Debug\net8.0\ChromaComics.sourcelink.json" />
-      <_ContentIncludedByDefault Remove="Shared\obj\Debug\net8.0\staticwebassets.build.json" />
-      <_ContentIncludedByDefault Remove="Shared\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="Shared\obj\project.packagespec.json" />
     </ItemGroup>
 
 </Project>

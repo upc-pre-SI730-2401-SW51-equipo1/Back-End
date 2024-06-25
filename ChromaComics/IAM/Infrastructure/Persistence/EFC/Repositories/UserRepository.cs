@@ -4,7 +4,7 @@ using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace ACME.LearningCenterPlatform.API.IAM.Infrastructure.Persistence.EFC.Repositories;
+namespace ChromaComics.IAM.Infrastructure.Persistence.EFC.Repositories;
 
 /**
  * <summary>
