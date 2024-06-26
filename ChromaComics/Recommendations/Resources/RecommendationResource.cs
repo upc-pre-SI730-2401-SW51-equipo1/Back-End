@@ -3,10 +3,12 @@
     public class RecommendationResource
     {
         public int Id { get; set; }
-        public string BookTitle { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public string Genre { get; set; } = string.Empty;
-        public string Author { get; set; } = string.Empty;
-        public string ImageUrl { get; set; } = string.Empty;
+        public string Title { get; set; }
+        public int Issue { get; set; }
+        public int Year { get; set; }
+        public string Publisher { get; set; }
+        public string Writer { get; set; }
+        public int CategoryId { get; set; }
+        public string Image { get; set; }
     }
 }

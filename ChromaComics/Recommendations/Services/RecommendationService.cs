@@ -23,11 +23,12 @@ namespace ChromaComics.Recommendations.Services
             _recommendationRepository = recommendationRepository;
             _unitOfWork = unitOfWork;
             _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri("https://backend-chromacomics-40a97e042fb4.herokuapp.com/");
         }
 
         public async Task<IEnumerable<Recommendation>> ListAsync()
         {
-            var response = await _httpClient.GetAsync("http://localhost:3000/comics");
+            var response = await _httpClient.GetAsync("api/recommendation");
             response.EnsureSuccessStatusCode();
 
             var recommendations = await response.Content.ReadFromJsonAsync<List<Recommendation>>();
@@ -41,17 +42,19 @@ namespace ChromaComics.Recommendations.Services
                 var recommendation = new Recommendation
                 {
                     Id = resource.Id,
-                    BookTitle = resource.BookTitle,
-                    Description = resource.Description,
-                    Genre = resource.Genre,
-                    Author = resource.Author,
-                    ImageUrl = resource.ImageUrl
+                    Title = resource.Title,
+                    Issue = resource.Issue,
+                    Year = resource.Year,
+                    Publisher = resource.Publisher,
+                    Writer = resource.Writer,
+                    CategoryId = resource.CategoryId,
+                    Image = resource.Image
                 };
 
                 await _recommendationRepository.AddAsync(recommendation);
                 await _unitOfWork.CompleteAsync();
 
-                var postResponse = await _httpClient.PostAsJsonAsync("http://localhost:3000/comics", recommendation);
+                var postResponse = await _httpClient.PostAsJsonAsync("api/recommendation", recommendation);
                 postResponse.EnsureSuccessStatusCode();
 
                 return new Comm.RecommendationResponse(recommendation);
@@ -69,11 +72,13 @@ namespace ChromaComics.Recommendations.Services
             if (existingRecommendation == null)
                 return new Comm.RecommendationResponse("Recommendation not found.");
 
-            existingRecommendation.BookTitle = resource.BookTitle;
-            existingRecommendation.Description = resource.Description;
-            existingRecommendation.Genre = resource.Genre;
-            existingRecommendation.Author = resource.Author;
-            existingRecommendation.ImageUrl = resource.ImageUrl;
+            existingRecommendation.Title = resource.Title;
+            existingRecommendation.Issue = resource.Issue;
+            existingRecommendation.Year = resource.Year;
+            existingRecommendation.Publisher = resource.Publisher;
+            existingRecommendation.Writer = resource.Writer;
+            existingRecommendation.CategoryId = resource.CategoryId;
+            existingRecommendation.Image = resource.Image;
 
             try
             {
@@ -102,11 +107,11 @@ namespace ChromaComics.Recommendations.Services
                 _recommendationRepository.Remove(existingRecommendation);
                 await _unitOfWork.CompleteAsync();
 
-                var deleteResponse = await _httpClient.DeleteAsync($"http://localhost:3000/comics/{id}");
+                var deleteResponse = await _httpClient.DeleteAsync($"api/recommendation/{id}");
                 if (!deleteResponse.IsSuccessStatusCode)
                 {
-                    Console.WriteLine($"Failed to delete recommendation with ID {id} from JSON Server.");
-                    return new Comm.RecommendationResponse($"Failed to delete recommendation from JSON Server.");
+                    Console.WriteLine($"Failed to delete recommendation with ID {id} from backend.");
+                    return new Comm.RecommendationResponse($"Failed to delete recommendation from backend.");
                 }
 
                 return new Comm.RecommendationResponse(existingRecommendation);

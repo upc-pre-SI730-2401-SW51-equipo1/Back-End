@@ -27,11 +27,13 @@ namespace ChromaComics.Recommendations.Controllers
                 resources.Add(new RecommendationResource
                 {
                     Id = recommendation.Id,
-                    BookTitle = recommendation.BookTitle,
-                    Description = recommendation.Description,
-                    Genre = recommendation.Genre,
-                    Author = recommendation.Author,
-                    ImageUrl = recommendation.ImageUrl // Añadir campo de imagen
+                    Title = recommendation.Title,
+                    Issue = recommendation.Issue,
+                    Year = recommendation.Year,
+                    Publisher = recommendation.Publisher,
+                    Writer = recommendation.Writer,
+                    CategoryId = recommendation.CategoryId,
+                    Image = recommendation.Image
                 });
             }
             return resources;
@@ -48,11 +50,13 @@ namespace ChromaComics.Recommendations.Controllers
             var recommendationResource = new RecommendationResource
             {
                 Id = result.Resource.Id,
-                BookTitle = result.Resource.BookTitle,
-                Description = result.Resource.Description,
-                Genre = result.Resource.Genre,
-                Author = result.Resource.Author,
-                ImageUrl = result.Resource.ImageUrl // Añadir campo de imagen
+                Title = result.Resource.Title,
+                Issue = result.Resource.Issue,
+                Year = result.Resource.Year,
+                Publisher = result.Resource.Publisher,
+                Writer = result.Resource.Writer,
+                CategoryId = result.Resource.CategoryId,
+                Image = result.Resource.Image
             };
             return Ok(recommendationResource);
         }
@@ -68,11 +72,13 @@ namespace ChromaComics.Recommendations.Controllers
             var recommendationResource = new RecommendationResource
             {
                 Id = result.Resource.Id,
-                BookTitle = result.Resource.BookTitle,
-                Description = result.Resource.Description,
-                Genre = result.Resource.Genre,
-                Author = result.Resource.Author,
-                ImageUrl = result.Resource.ImageUrl // Añadir campo de imagen
+                Title = result.Resource.Title,
+                Issue = result.Resource.Issue,
+                Year = result.Resource.Year,
+                Publisher = result.Resource.Publisher,
+                Writer = result.Resource.Writer,
+                CategoryId = result.Resource.CategoryId,
+                Image = result.Resource.Image
             };
             return Ok(recommendationResource);
         }

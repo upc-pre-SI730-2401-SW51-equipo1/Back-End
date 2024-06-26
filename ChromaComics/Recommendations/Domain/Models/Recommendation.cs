@@ -3,10 +3,12 @@
     public class Recommendation
     {
         public int Id { get; set; }
-        public string BookTitle { get; set; }
-        public string Description { get; set; }
-        public string Genre { get; set; }
-        public string Author { get; set; }
-        public string ImageUrl { get; set; } // Añadir campo de imagen
+        public string Title { get; set; }
+        public int Issue { get; set; }
+        public int Year { get; set; }
+        public string Publisher { get; set; }
+        public string Writer { get; set; }
+        public int CategoryId { get; set; }
+        public string Image { get; set; }
     }
 }

@@ -17,7 +17,10 @@ builder.Services.AddHttpClient<IRecommendationService, RecommendationService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// Asegúrate de que la cadena de conexión esté correctamente configurada
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+                      ?? "Your_Heroku_Database_Connection_String";
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     if (connectionString != null)

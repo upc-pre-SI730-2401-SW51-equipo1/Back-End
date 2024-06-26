@@ -19,6 +19,7 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
             if (!builder.IsConfigured)
             {
                 // Aquí puedes agregar una configuración por defecto si es necesario
+                builder.UseMySQL("Your_Heroku_Database_Connection_String");
             }
 
             builder.AddCreatedUpdatedInterceptor();
@@ -68,16 +69,18 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
                 });
 
             builder.UseSnakeCaseNamingConvention();
-            
-            // Configuración de la entidad Recommendation
+
+            // Configuración para la entidad Recommendation
             builder.Entity<Recommendation>().ToTable("Recommendations");
             builder.Entity<Recommendation>().HasKey(r => r.Id);
             builder.Entity<Recommendation>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Recommendation>().Property(r => r.BookTitle).IsRequired();
-            builder.Entity<Recommendation>().Property(r => r.Description).IsRequired();
-            builder.Entity<Recommendation>().Property(r => r.Genre).IsRequired();
-            builder.Entity<Recommendation>().Property(r => r.Author).IsRequired();
-            builder.Entity<Recommendation>().Property(r => r.ImageUrl).IsRequired(false).HasColumnName("image_url");
+            builder.Entity<Recommendation>().Property(r => r.Title).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.Issue).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.Year).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.Publisher).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.Writer).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.CategoryId).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.Image).IsRequired(false).HasColumnName("image");
         }
     }
 }
