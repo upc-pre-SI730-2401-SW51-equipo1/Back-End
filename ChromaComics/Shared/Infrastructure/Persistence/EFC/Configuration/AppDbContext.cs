@@ -2,7 +2,9 @@
 using ChromaComics.Comics.Domain.Model.Entities;
 using ChromaComics.IAM.Domain.Model.Aggregates;
 using ChromaComics.payment.Domain.Model.Aggregates;
+using ChromaComics.Recommendations.Models;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using ChromaComics.ShoppingCarts.Domain.Models;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,12 +12,15 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
+    public DbSet<Recommendation> Recommendations { get; set; }
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder builder)
     {
         base.OnConfiguring(builder);
         // Enable Audit Fields Interceptors
         builder.AddCreatedUpdatedInterceptor();
     }
+    
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -103,5 +108,16 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         // Apply SnakeCase Naming Convention
         // Apply SnakeCase Naming Convention
         builder.UseSnakeCaseNamingConvention();
+        builder.Entity<Recommendation>().ToTable("Recommendations");
+        builder.Entity<Recommendation>().HasKey(r => r.Id);
+        builder.Entity<Recommendation>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Recommendation>().Property(r => r.BookTitle).IsRequired();
+        builder.Entity<Recommendation>().Property(r => r.Description).IsRequired();
+        builder.Entity<Recommendation>().Property(r => r.Genre).IsRequired();
+        builder.Entity<Recommendation>().Property(r => r.Author).IsRequired();
+        builder.Entity<ShoppingCart>().ToTable("ShoppingCarts");
+        builder.Entity<ShoppingCart>().HasKey(r => r.Id);
+        builder.Entity<ShoppingCart>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<ShoppingCart>().Property(r => r.ProductId).IsRequired();
     }
 }

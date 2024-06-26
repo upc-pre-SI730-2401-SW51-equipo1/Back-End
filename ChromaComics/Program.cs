@@ -20,11 +20,16 @@ using ChromaComics.payment.Application.Internal.QueryServices;
 using ChromaComics.payment.Domain.Repositories;
 using ChromaComics.payment.Domain.Services;
 using ChromaComics.payment.Infrastructure.Repositories;
+using ChromaComics.Recommendations.Domain.Repositories;
+using ChromaComics.Recommendations.Persistence.Repositories;
+using ChromaComics.Recommendations.Services;
 using ChromaComics.Shared.Domain.Repositories;
 using ChromaComics.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
 using ChromaComics.Shared.Infrastructure.Persistence.EFC.Repositories;
-
+using ChromaComics.ShoppingCarts.Domain.Repositories;
+using ChromaComics.ShoppingCarts.Persistence.Repositories;
+using ChromaComics.ShoppingCarts.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -49,7 +54,7 @@ builder.Services.AddDbContext<AppDbContext>(
             if (builder.Environment.IsDevelopment())
                 options.UseMySQL(connectionString)
                     .LogTo(Console.WriteLine, LogLevel.Information)
-                    .EnableSensitiveDataLogging()
+                    //.EnableSensitiveDataLogging()
                     .EnableDetailedErrors();
             else if (builder.Environment.IsProduction())
                 options.UseMySQL(connectionString)
@@ -152,6 +157,10 @@ builder.Services.AddScoped<IComicQueryService, ComicQueryService>();
 builder.Services.AddScoped<IBillingRepository, BillingRepository>();
 builder.Services.AddScoped<IBillingCommandService, BillingCommandService>();
 builder.Services.AddScoped<IBillingQueryService, BillingQueryService>();
+builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
+builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
+builder.Services.AddScoped<IRecommendationService, RecommendationService>();
+builder.Services.AddScoped<IRecommendationRepository, RecommendationRepository>();
 var app = builder.Build();
 
 // Verify Database Objects are created

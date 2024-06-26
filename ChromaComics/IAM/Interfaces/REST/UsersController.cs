@@ -29,6 +29,7 @@ public class UsersController(IUserQueryService userQueryService) : ControllerBas
      * <returns>The user resource</returns>
      */
     [HttpGet("{id}")]
+    [AllowAnonymous]
     public async Task<IActionResult> GetUserById(int id)
     {
         var getUserByIdQuery = new GetUserByIdQuery(id);
@@ -44,6 +45,7 @@ public class UsersController(IUserQueryService userQueryService) : ControllerBas
      * <returns>The user resources</returns>
      */
     [HttpGet]
+    [AllowAnonymous]
     public async Task<IActionResult> GetAllUsers()
     {
         var getAllUsersQuery = new GetAllUsersQuery();
