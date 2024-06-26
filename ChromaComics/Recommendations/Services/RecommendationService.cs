@@ -1,74 +1,86 @@
 ﻿using ChromaComics.Recommendations.Domain.Models;
 using ChromaComics.Recommendations.Domain.Repositories;
 using ChromaComics.Recommendations.Domain.Services;
-using ChromaComics.Recommendations.Domain.Services.Communication;
+using Comm = ChromaComics.Recommendations.Domain.Services.Communication; // Alias para evitar ambigüedad
+using ChromaComics.Recommendations.Resources;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace ChromaComics.Recommendations.Services;
-
-public class RecommendationService : IRecommendationService
+namespace ChromaComics.Recommendations.Services
 {
-    private readonly IRecommendationRepository _shoppingcartRepository;
-
-    public RecommendationService(IRecommendationRepository shoppingcartRepository)
+    public class RecommendationService : IRecommendationService
     {
-        _shoppingcartRepository = shoppingcartRepository;
-    }   
+        private readonly IRecommendationRepository _recommendationRepository;
 
-    public async Task<IEnumerable<Recommendation>> ListAsync()
-    {
-        return await _shoppingcartRepository.ListAsync();
-    }
-
-    public async Task<RecommendationResponse> SaveAsync(Recommendation shoppingcart)
-    {
-        try
+        public RecommendationService(IRecommendationRepository recommendationRepository)
         {
-            await _shoppingcartRepository.AddAsync(shoppingcart);
-            return new RecommendationResponse(shoppingcart);
+            _recommendationRepository = recommendationRepository;
         }
-        catch (Exception e)
+
+        public async Task<IEnumerable<Recommendation>> ListAsync()
         {
-            return new RecommendationResponse($"An error occurred while saving the cart: {e.Message}");
+            return await _recommendationRepository.ListAsync();
         }
-    }
 
-    public async Task<RecommendationResponse> UpdateAsync(int id, Recommendation shoppingcart)
-    {
-        var existingShoppingCart = await _shoppingcartRepository.FindByIdAsync(id);
-
-        if (existingShoppingCart == null)
-            return new RecommendationResponse("Cart not found.");
-
-        existingShoppingCart.Id = shoppingcart.Id;
-
-        try
+        public async Task<Comm.RecommendationResponse> SaveAsync(SaveRecommendationResource resource)
         {
-            _shoppingcartRepository.Update(existingShoppingCart);
-            return new RecommendationResponse(existingShoppingCart);
+            try
+            {
+                var recommendation = new Recommendation
+                {
+                    BookTitle = resource.BookTitle,
+                    Description = resource.Description,
+                    Genre = resource.Genre,
+                    Author = resource.Author
+                };
+                await _recommendationRepository.AddAsync(recommendation);
+                return new Comm.RecommendationResponse(recommendation);
+            }
+            catch (Exception ex)
+            {
+                return new Comm.RecommendationResponse($"An error occurred when saving the recommendation: {ex.Message}");
+            }
         }
-        catch (Exception e)
+
+        public async Task<Comm.RecommendationResponse> UpdateAsync(int id, SaveRecommendationResource resource)
         {
-            return new RecommendationResponse($"An error occurred while updating the cart: {e.Message}");
+            var existingRecommendation = await _recommendationRepository.FindByIdAsync(id);
+
+            if (existingRecommendation == null)
+                return new Comm.RecommendationResponse("Recommendation not found.");
+
+            existingRecommendation.BookTitle = resource.BookTitle;
+            existingRecommendation.Description = resource.Description;
+            existingRecommendation.Genre = resource.Genre;
+            existingRecommendation.Author = resource.Author;
+
+            try
+            {
+                _recommendationRepository.Update(existingRecommendation);
+                return new Comm.RecommendationResponse(existingRecommendation);
+            }
+            catch (Exception ex)
+            {
+                return new Comm.RecommendationResponse($"An error occurred when updating the recommendation: {ex.Message}");
+            }
         }
-    }
 
-    public async Task<RecommendationResponse> DeleteAsync(int id)
-    {
-        var existingShoppingCart = await _shoppingcartRepository.FindByIdAsync(id);
-
-        if (existingShoppingCart == null)
-            return new RecommendationResponse("Cart not found.");
-
-        try
+        public async Task<Comm.RecommendationResponse> DeleteAsync(int id)
         {
-            _shoppingcartRepository.Remove(existingShoppingCart);
+            var existingRecommendation = await _recommendationRepository.FindByIdAsync(id);
 
-            return new RecommendationResponse(existingShoppingCart);
-        }
-        catch (Exception e)
-        {
+            if (existingRecommendation == null)
+                return new Comm.RecommendationResponse("Recommendation not found.");
 
-            return new RecommendationResponse($"An error occurred while deleting the cart: {e.Message}");
+            try
+            {
+                _recommendationRepository.Remove(existingRecommendation);
+                return new Comm.RecommendationResponse(existingRecommendation);
+            }
+            catch (Exception ex)
+            {
+                return new Comm.RecommendationResponse($"An error occurred when deleting the recommendation: {ex.Message}");
+            }
         }
     }
 }

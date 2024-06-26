@@ -1,12 +1,13 @@
 ﻿using ChromaComics.Recommendations.Domain.Models;
 using ChromaComics.Recommendations.Domain.Services.Communication;
-
-namespace ChromaComics.Recommendations.Domain.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using ChromaComics.Recommendations.Resources;
 
 public interface IRecommendationService
 {
     Task<IEnumerable<Recommendation>> ListAsync();
-    Task<RecommendationResponse> SaveAsync(Recommendation recommendation);
-    Task<RecommendationResponse> UpdateAsync(int id, Recommendation recommendation);
+    Task<RecommendationResponse> SaveAsync(SaveRecommendationResource resource);
+    Task<RecommendationResponse> UpdateAsync(int id, SaveRecommendationResource resource);
     Task<RecommendationResponse> DeleteAsync(int id);
 }
