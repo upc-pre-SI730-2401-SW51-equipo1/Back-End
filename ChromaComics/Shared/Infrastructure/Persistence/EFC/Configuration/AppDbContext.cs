@@ -29,6 +29,7 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
         {
             base.OnModelCreating(builder);
 
+            // Configuración para otras entidades
             builder.Entity<Billing>().ToTable("Billings");
             builder.Entity<Billing>().HasKey(f => f.Id);
             builder.Entity<Billing>().Property(f => f.Id).IsRequired().ValueGeneratedOnAdd();
@@ -50,11 +51,11 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
                 a =>
                 {
                     a.WithOwner().HasForeignKey("Id");
-                    a.Property(s => s.Street).HasColumnName("AddressStreet").IsRequired(false);;
-                    a.Property(s => s.Number).HasColumnName("AddressNumber").IsRequired(false);;
-                    a.Property(s => s.City).HasColumnName("AddressCity").IsRequired(false);;
-                    a.Property(s => s.PostalCode).HasColumnName("AddressPostalCode").IsRequired(false);;
-                    a.Property(s => s.Country).HasColumnName("AddressCountry").IsRequired(false);;
+                    a.Property(s => s.Street).HasColumnName("AddressStreet").IsRequired(false);
+                    a.Property(s => s.Number).HasColumnName("AddressNumber").IsRequired(false);
+                    a.Property(s => s.City).HasColumnName("AddressCity").IsRequired(false);
+                    a.Property(s => s.PostalCode).HasColumnName("AddressPostalCode").IsRequired(false);
+                    a.Property(s => s.Country).HasColumnName("AddressCountry").IsRequired(false);
                 });
             builder.Entity<Billing>().Property(f => f.PhoneNumber).IsRequired();
             builder.Entity<Billing>().Property(f => f.Status).IsRequired();
@@ -65,7 +66,10 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
                     e.Property(a => a.ShoppingId).HasColumnName("ShoppingId").IsRequired(false);
                     e.Property(a => a.TotalPrice).HasColumnName("TotalPrice").IsRequired(false);
                 });
+
             builder.UseSnakeCaseNamingConvention();
+            
+            // Configuración de la entidad Recommendation
             builder.Entity<Recommendation>().ToTable("Recommendations");
             builder.Entity<Recommendation>().HasKey(r => r.Id);
             builder.Entity<Recommendation>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
@@ -73,6 +77,7 @@ namespace ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration
             builder.Entity<Recommendation>().Property(r => r.Description).IsRequired();
             builder.Entity<Recommendation>().Property(r => r.Genre).IsRequired();
             builder.Entity<Recommendation>().Property(r => r.Author).IsRequired();
+            builder.Entity<Recommendation>().Property(r => r.ImageUrl).IsRequired(false).HasColumnName("image_url");
         }
     }
 }

@@ -30,7 +30,8 @@ namespace ChromaComics.Recommendations.Controllers
                     BookTitle = recommendation.BookTitle,
                     Description = recommendation.Description,
                     Genre = recommendation.Genre,
-                    Author = recommendation.Author
+                    Author = recommendation.Author,
+                    ImageUrl = recommendation.ImageUrl // Añadir campo de imagen
                 });
             }
             return resources;
@@ -50,7 +51,8 @@ namespace ChromaComics.Recommendations.Controllers
                 BookTitle = result.Resource.BookTitle,
                 Description = result.Resource.Description,
                 Genre = result.Resource.Genre,
-                Author = result.Resource.Author
+                Author = result.Resource.Author,
+                ImageUrl = result.Resource.ImageUrl // Añadir campo de imagen
             };
             return Ok(recommendationResource);
         }
@@ -69,7 +71,8 @@ namespace ChromaComics.Recommendations.Controllers
                 BookTitle = result.Resource.BookTitle,
                 Description = result.Resource.Description,
                 Genre = result.Resource.Genre,
-                Author = result.Resource.Author
+                Author = result.Resource.Author,
+                ImageUrl = result.Resource.ImageUrl // Añadir campo de imagen
             };
             return Ok(recommendationResource);
         }
