@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChromaComics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e346c4a0ae1c02226d133e7b3a0d69cea4840b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74b267190e58b899b54657a9b4a57256dc9818b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChromaComics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChromaComics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

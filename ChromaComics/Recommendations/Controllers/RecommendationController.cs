@@ -41,35 +41,16 @@ namespace ChromaComics.Recommendations.Controllers
         {
             var result = await _recommendationService.SaveAsync(resource);
 
-            if (!result.Success || result.Resource == null)
+            if (!result.Success)
                 return BadRequest(result.Message);
 
             var recommendationResource = new RecommendationResource
             {
                 Id = result.Resource.Id,
-                BookTitle = result.Resource.BookTitle ?? string.Empty,
-                Description = result.Resource.Description ?? string.Empty,
-                Genre = result.Resource.Genre ?? string.Empty,
-                Author = result.Resource.Author ?? string.Empty
-            };
-            return Ok(recommendationResource);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, [FromBody] SaveRecommendationResource resource)
-        {
-            var result = await _recommendationService.UpdateAsync(id, resource);
-
-            if (!result.Success || result.Resource == null)
-                return BadRequest(result.Message);
-
-            var recommendationResource = new RecommendationResource
-            {
-                Id = result.Resource.Id,
-                BookTitle = result.Resource.BookTitle ?? string.Empty,
-                Description = result.Resource.Description ?? string.Empty,
-                Genre = result.Resource.Genre ?? string.Empty,
-                Author = result.Resource.Author ?? string.Empty
+                BookTitle = result.Resource.BookTitle,
+                Description = result.Resource.Description,
+                Genre = result.Resource.Genre,
+                Author = result.Resource.Author
             };
             return Ok(recommendationResource);
         }
@@ -79,16 +60,16 @@ namespace ChromaComics.Recommendations.Controllers
         {
             var result = await _recommendationService.DeleteAsync(id);
 
-            if (!result.Success || result.Resource == null)
+            if (!result.Success)
                 return BadRequest(result.Message);
 
             var recommendationResource = new RecommendationResource
             {
                 Id = result.Resource.Id,
-                BookTitle = result.Resource.BookTitle ?? string.Empty,
-                Description = result.Resource.Description ?? string.Empty,
-                Genre = result.Resource.Genre ?? string.Empty,
-                Author = result.Resource.Author ?? string.Empty
+                BookTitle = result.Resource.BookTitle,
+                Description = result.Resource.Description,
+                Genre = result.Resource.Genre,
+                Author = result.Resource.Author
             };
             return Ok(recommendationResource);
         }

@@ -1,5 +1,5 @@
 ﻿using ChromaComics.Recommendations.Domain.Models;
-using ChromaComics.Shared.Domain.Services.Communication;
+using ChromaComics.Recommendations.Domain.Services.Communication;
 
 namespace ChromaComics.Recommendations.Domain.Services.Communication;
 

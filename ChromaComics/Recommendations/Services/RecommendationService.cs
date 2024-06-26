@@ -3,6 +3,7 @@ using ChromaComics.Recommendations.Domain.Repositories;
 using ChromaComics.Recommendations.Domain.Services;
 using Comm = ChromaComics.Recommendations.Domain.Services.Communication; // Alias para evitar ambigüedad
 using ChromaComics.Recommendations.Resources;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
