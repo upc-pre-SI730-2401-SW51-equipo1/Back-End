@@ -5,9 +5,8 @@ namespace ChromaComics.ShoppingCarts.Domain.Repositories;
 public interface IShoppingCartRepository
 {
     Task<IEnumerable<ShoppingCart>> ListAsync();
-    Task AddAsync(ShoppingCart shoppingcart);
+    Task AddAsync(ShoppingCart shoppingCart);
     Task<ShoppingCart> FindByIdAsync(int id);
-    void Update(ShoppingCart shoppingcart);
-    void Remove(ShoppingCart shoppingcart);
-
+    void Update(ShoppingCart shoppingCart);
+    void Remove(ShoppingCart shoppingCart);
 }

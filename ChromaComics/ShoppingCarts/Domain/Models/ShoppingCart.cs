@@ -1,8 +1,8 @@
-﻿namespace ChromaComics.ShoppingCarts.Domain.Models;
-
-public class ShoppingCart
+﻿namespace ChromaComics.ShoppingCarts.Domain.Models
 {
-    public int Id { get; set; }
-    public List<int> ProductIds { get; set; }
-    
+    public class ShoppingCart
+    {
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+    }
 }

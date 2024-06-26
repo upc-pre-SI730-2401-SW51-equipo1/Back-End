@@ -1,7 +1,9 @@
-﻿namespace ChromaComics.ShoppingCarts.Resources;
-
-public class ShoppingCartResource
+﻿namespace ChromaComics.ShoppingCarts.Resources
 {
-    public int Id { get; set; }
-    public List<int> ProductIds { get; set; }
+    public class ShoppingCartResource
+    {
+        public int Id { get; set; }
+        public int ProductId { get; set; } 
+    }
 }
+

@@ -1,38 +1,45 @@
 ﻿using ChromaComics.ShoppingCarts.Domain.Models;
 using ChromaComics.ShoppingCarts.Domain.Repositories;
-using ChromaComics.Shared.Persistence.Contexts;
+using ChromaComics.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
 
-namespace ChromaComics.Shared.Persistence.Repositories;
-
-public class ShoppingCartRepository : BaseRepository, IShoppingCartRepository
+namespace ChromaComics.ShoppingCarts.Persistence.Repositories
 {
-    public ShoppingCartRepository(AppDbContext context) : base(context)
+    public class ShoppingCartRepository : BaseRepository<ShoppingCart>, IShoppingCartRepository
     {
-    }
+        private readonly AppDbContext _context;
 
-    public async Task<IEnumerable<ShoppingCart>> ListAsync()
-    {
-        return await _context.ShoppingCarts.ToListAsync();
-    }
+        public ShoppingCartRepository(AppDbContext context) : base(context)
+        {
+            _context = context;
+        }
 
-    public async Task AddAsync(ShoppingCart shoppingCart)
-    {
-        await _context.ShoppingCarts.AddAsync(shoppingCart);
-    }
+        public async Task<IEnumerable<ShoppingCart>> ListAsync()
+        {
+            return await _context.ShoppingCarts.ToListAsync();
+        }
 
-    public async Task<ShoppingCart> FindByIdAsync(int id)
-    {
-        return await _context.ShoppingCarts.FindAsync(id);
-    }
+        public async Task AddAsync(ShoppingCart shoppingCart)
+        {
+            await _context.ShoppingCarts.AddAsync(shoppingCart);
+        }
 
-    public void Update(ShoppingCart shoppingcart)
-    {
-        _context.ShoppingCarts.Update(shoppingcart);
-    }
+        public async Task<ShoppingCart> FindByIdAsync(int id)
+        {
+            return await _context.ShoppingCarts.FindAsync(id);
+        }
 
-    public void Remove(ShoppingCart shoppingcart)
-    {
-        _context.ShoppingCarts.Remove(shoppingcart);
+        public void Update(ShoppingCart shoppingCart)
+        {
+            _context.ShoppingCarts.Update(shoppingCart);
+        }
+
+        public void Remove(ShoppingCart shoppingCart)
+        {
+            _context.ShoppingCarts.Remove(shoppingCart);
+        }
     }
 }

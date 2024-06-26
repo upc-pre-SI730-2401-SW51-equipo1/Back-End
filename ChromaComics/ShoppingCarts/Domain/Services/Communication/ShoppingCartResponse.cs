@@ -1,5 +1,5 @@
 ﻿using ChromaComics.ShoppingCarts.Domain.Models;
-using ChromaComics.Shared.Domain.Services.Communication;
+using ChromaComics.ShoppingCarts.Domain.Services.Communication;
 
 namespace ChromaComics.ShoppingCarts.Domain.Services.Communication;
 

@@ -1,34 +1,60 @@
 using ChromaComics.ShoppingCarts.Domain.Repositories;
-using ChromaComics.ShoppingCarts.Domain.Services;
-using ChromaComics.ShoppingCarts.Mapping;
-using ChromaComics.ShoppingCarts.Services;
-using ChromaComics.Shared.Persistence.Contexts;
-using ChromaComics.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using ChromaComics.ShoppingCarts.Domain.Services;
+using ChromaComics.ShoppingCarts.Persistence.Repositories;
+using ChromaComics.ShoppingCarts.Services;
+using ChromaComics.Shared.Domain.Repositories;
+using ChromaComics.Shared.Infrastructure.Persistence.EFC.Configuration;
+using ChromaComics.Shared.Infrastructure.Persistence.EFC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar DbContext con MySQL
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// Configurar AutoMapper
-builder.Services.AddAutoMapper(typeof(ModelToResourceProfile), typeof(ResourceToModelProfile));
-
-// Registrar servicios de aplicación y repositorios
-builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
-builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
-
-// Agregar controladores
+// Add services to the container.
 builder.Services.AddControllers();
 
-// Agregar Endpoints API Explorer y Swagger
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    if (connectionString != null)
+    {
+        if (builder.Environment.IsDevelopment())
+            options.UseMySQL(connectionString)
+                .LogTo(Console.WriteLine, LogLevel.Information)
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors();
+        else if (builder.Environment.IsProduction())
+            options.UseMySQL(connectionString)
+                .LogTo(Console.WriteLine, LogLevel.Error)
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors();    
+    }
+});
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
+// Register repositories
+builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
+
+// Register services
+builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
+
+// Register Unit of Work
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
-// Configurar el pipeline de solicitudes HTTP
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.EnsureCreated();
+}
+
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
